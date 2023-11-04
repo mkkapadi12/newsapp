@@ -1,6 +1,6 @@
-Certainly! Here's a sample README.md file for your React-based News App that fetches data from a News API:
-
 # News App
+
+![news_app](news.png)
 
 News App is a web application developed with React.js that allows users to browse and read the latest news articles from various sources. It fetches real-time news data from a News API and provides a user-friendly interface for exploring and staying updated on current events.
 
@@ -27,7 +27,7 @@ Make sure you have the following software and accounts set up:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/news-app.git
+   git clone https://github.com/mkkapadi12/newsapp.git
    ```
 
 2. Change your working directory to the project folder:
@@ -67,7 +67,7 @@ Make sure you have the following software and accounts set up:
 
 ## Contributing
 
-Contributions and improvements are welcome! If you have any ideas, feature suggestions, or bug reports, please open an issue or create a pull request on the [News App GitHub repository](https://github.com/yourusername/news-app).
+Contributions and improvements are welcome! If you have any ideas, feature suggestions, or bug reports, please open an issue or create a pull request on the [News App GitHub repository](https://github.com/mkkapadi12/newsapp.git).
 
 ## License
 
@@ -80,10 +80,6 @@ This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md)
 
 ## Contact
 
-If you have any questions or need assistance, please feel free to contact us at your.email@example.com.
+If you have any questions or need assistance, please feel free to contact us at mayurkapadi12@gmail.com
 
 Enjoy staying informed with the News App!
-
----
-
-Feel free to customize the content and structure of this README according to your specific app and preferences. Replace placeholders like `yourusername`, `your.email@example.com`, and provide the actual project details and links.

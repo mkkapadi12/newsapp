@@ -64,7 +64,7 @@ export class NavBar extends Component {
                 </ul>
               </li>
             </ul>
-            {/* <form className="form-inline my-2 my-lg-0">
+            <form className="form-inline my-2 my-lg-0">
               <input
                 className="form-control mr-sm-2"
                 type="text"
@@ -76,7 +76,7 @@ export class NavBar extends Component {
               >
                 Search
               </button>
-            </form> */}
+            </form>
           </div>
         </nav>
       </div>
