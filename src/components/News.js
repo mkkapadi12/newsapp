@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
+import PropTypes from "prop-types";
 
 export class News extends Component {
+  static defaultProps = {
+    pageSize: 10,
+  };
+
+  static propTypes = {
+    pageSize: PropTypes.number,
+  };
   constructor() {
     super();
-    console.log("This is a constructor for News.");
+    // console.log("This is a constructor for News.");
     this.state = {
       articles: [],
       loading: false,
@@ -13,9 +21,8 @@ export class News extends Component {
   }
 
   async componentDidMount() {
-    // let url =
-    // "https://newsapi.org/v2/top-headlines?country=in&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=1&pageSize=10";
-    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    // let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
     let parsendData = await data.json();
     // console.log(parsendData);
@@ -26,13 +33,15 @@ export class News extends Component {
   }
 
   handlePrev = async () => {
-    console.log("Previous");
-    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
+    // console.log("Previous");
+    // let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
+    //   this.state.page - 1
+    // }&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${
+      this.props.category
+    }&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
-    // let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
-    //   this.state.page - 1
-    // }&pageSize=10`;
     let data = await fetch(url);
     let parsendData = await data.json();
     // console.log(parsendData);
@@ -43,19 +52,21 @@ export class News extends Component {
   };
 
   handleNext = async () => {
-    console.log("Next");
+    // console.log("Next");
 
     if (
       this.state.page + 1 >
       Math.ceil(this.state.totalResults / this.props.pageSize)
     ) {
     } else {
-      let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
+      // let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
+      //   this.state.page + 1
+      // }&pageSize=${this.props.pageSize}`;
+      let url = `https://newsapi.org/v2/top-headlines?country=in&category=${
+        this.props.category
+      }&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
         this.state.page + 1
       }&pageSize=${this.props.pageSize}`;
-      // let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=c1918ffb7ae1428aabd51ca1ec357945&page=${
-      // this.state.page + 1
-      // }&pageSize=10`;
       let data = await fetch(url);
       let parsendData = await data.json();
       // console.log(parsendData);

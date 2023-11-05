@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 575px) {
+  body .navbar-collapse {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    z-index: 99;
+    top: 56px;
+    padding: 0px 10px;
+    background-color: rgb(52, 58, 64) !important;
+  }
+}
