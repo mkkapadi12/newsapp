@@ -7,8 +7,8 @@ export class NavBar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-          <Link className="navbar-brand" to="/home">
-            NewsApp
+          <Link className="navbar-brand" to="/">
+            NewsMonkey
           </Link>
           <button
             className="navbar-toggler d-lg-none"

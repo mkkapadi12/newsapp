@@ -5,6 +5,7 @@ import News from "./components/News";
 import { BrowserRouter as Main, Route, Routes } from "react-router-dom";
 
 export default class App extends Component {
+  pageSize = 9;
   render() {
     return (
       <>
@@ -14,35 +15,59 @@ export default class App extends Component {
             <Route
               exact
               path="/home"
-              element={<News pageSize={12} key="general" category="general" />}
+              element={
+                <News
+                  pageSize={this.pageSize}
+                  key="general"
+                  category="general"
+                />
+              }
             />
             <Route
               exact
               path="/science"
-              element={<News pageSize={12} key="science" category="science" />}
+              element={
+                <News
+                  pageSize={this.pageSize}
+                  key="science"
+                  category="science"
+                />
+              }
             />
             <Route
               exact
               path="/health"
-              element={<News pageSize={12} key="health" category="health" />}
+              element={
+                <News pageSize={this.pageSize} key="health" category="health" />
+              }
             />
             <Route
               exact
               path="/sports"
-              element={<News pageSize={12} key="sport" category="sport" />}
+              element={
+                <News pageSize={this.pageSize} key="sport" category="sport" />
+              }
             />
             <Route
               exact
               path="/business"
               element={
-                <News pageSize={12} key="business" category="business" />
+                <News
+                  pageSize={this.pageSize}
+                  key="business"
+                  category="business"
+                />
               }
             />
             <Route
               exact
               path="/technology"
               element={
-                <News pageSize={12} key="technology" category="technology" />
+                <News
+                  pageSize={this.pageSize}
+                  key="technology"
+                  category="technology"
+                />
               }
             />
             <Route
@@ -50,7 +75,7 @@ export default class App extends Component {
               path="/entertainment"
               element={
                 <News
-                  pageSize={12}
+                  pageSize={this.pageSize}
                   key="entertainment"
                   category="entertainment"
                 />
